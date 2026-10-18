@@ -1,4 +1,3 @@
-
 <template>
   <header class="relative bg-background text-foreground">
     <div
@@ -28,7 +27,7 @@
           <NuxtLink
             v-if="!item.children && !item.customMenu"
             :to="item.to"
-            class="py-6 text-md font-medium transition-colors hover:text-blue-400"
+            class="py-2 text-md font-medium transition-colors hover:text-blue-400"
             @click="closeAllMenus"
           >
             {{ item.label }}
@@ -41,7 +40,7 @@
           >
             <button
               type="button"
-              class="flex items-center gap-1 py-6 text-md font-medium transition-colors hover:text-blue-400"
+              class="flex items-center gap-1 py-2 text-md font-medium transition-colors hover:text-blue-400"
               :aria-expanded="desktopSubMenu === item.label"
               @click.stop="toggleDesktopSubMenu(item.label)"
             >
@@ -73,7 +72,7 @@
                 v-for="child in item.children"
                 :key="child.to"
                 :to="child.to"
-                class="block px-5 py-3 text-md transition-colors hover:bg-blue-500/10 hover:text-blue-400"
+                class="block px-5 py-2 text-md transition-colors hover:bg-blue-500/10 hover:text-blue-400"
                 @click="closeAllMenus"
               >
                 {{ child.label }}
@@ -85,7 +84,7 @@
           <NuxtLink
             v-if="!item.children && item.customMenu"
             :to="item.to"
-            class="flex items-center py-6 transition-opacity hover:opacity-80"
+            class="flex items-center py-2 transition-opacity hover:opacity-80"
             :aria-label="item.label"
             @click="closeAllMenus"
           >
@@ -96,10 +95,23 @@
             />
           </NuxtLink>
         </template>
+
+        <!-- line -->
+        <a
+          href="https://page.line.me/671pygmo?oat__id=6948636&openQrModal=true"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src="/images/line.jpg"
+            alt="免下載APP 立即登入"
+            class="h-15 w-auto object-contain"
+          >
+        </a>
       </nav>
 
       <!-- Mobile Navigation -->
-      <div class="mobile-menu-wrapper lg:hidden">
+      <div class="mobile-menu-wrapper lg:hidden py-4">
         <!-- Hamburger -->
         <button
           type="button"
@@ -143,7 +155,7 @@
         >
           <div
             v-if="isMobileMenuOpen"
-            class="absolute left-0 right-0 top-full z-50 border-t border-white/10 bg-background text-foreground shadow-lg"
+            class="absolute left-0 right-0 top-full z-50 border-t border-white/10 bg-background text-foreground shadow-lg h-screen overflow-y-auto"
             @click.stop
           >
             <nav class="px-6 py-4">
@@ -232,6 +244,18 @@
                   />
                 </NuxtLink>
               </template>
+
+              <a
+                href="https://page.line.me/671pygmo?oat__id=6948636&openQrModal=true"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/images/line.jpg"
+                  alt="免下載APP 立即登入"
+                  class="h-15 w-auto object-contain"
+                >
+              </a>
             </nav>
           </div>
         </Transition>

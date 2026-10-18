@@ -11,7 +11,7 @@ export type MenuItem = {
 export const menuItems: MenuItem[] = [
   {
     label: '即時報價',
-    to: '/quote',
+    to: '/instant-quote',
     customMenu: null
   },
   {
@@ -68,10 +68,5 @@ export const menuItems: MenuItem[] = [
     label: '訂單查詢',
     to: '/order-query',
     customMenu: '/images/order-query.jpg'
-  },
-  {
-    label: '免下載APP 立即登入',
-    to: '/line',
-    customMenu: '/images/line.jpg'
   },
 ]
