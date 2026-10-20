@@ -40,6 +40,10 @@ export default defineNuxtConfig({
 
       meta: [
         {
+          name: 'google-site-verification',
+          content: 'yHURp3PjHCzhK7Z2yqH_bI0IbxKbZMTQHcshTccdE-g',
+        },
+        {
           name: 'description',
           content:
             'YUBAS 機場接送推薦平台，提供全台 24H 合法叫車服務、LINE@ AI 智慧報價與透明價格，免下載 APP，讓每趟旅程安心可靠。',
@@ -72,5 +76,20 @@ export default defineNuxtConfig({
       apiBase: '/api',
       siteUrl: 'http://localhost:3000',
     },
+  },
+
+  modules: [
+    '@nuxtjs/sitemap',
+  ],
+
+  site: {
+    url: 'https://yubas-web-1029799001603.europe-west1.run.app/',
+    name: 'YUBAS',
+  },
+
+  sitemap: {
+    exclude: [
+      '/order-query',
+    ],
   },
 })

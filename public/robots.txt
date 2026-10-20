@@ -1,2 +1,4 @@
 User-Agent: *
 Disallow:
+
+Sitemap: https://yubas-web-1029799001603.europe-west1.run.app/
